@@ -81,4 +81,7 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 
+.idea/vcs.xml
+
+
 # End of https://www.gitignore.io/api/phpstorm
