@@ -61,6 +61,13 @@ class BookProduct extends ShopProduct{
     function getNumberOfPages(){
         return $this->numPages;
     }
+    function getSummaryLine()
+    {
+        $base = "{$this->title} ( {$this->producerMainName}, ";
+        $base .= "{$this->producerFirstName} )";
+        $base .= ": {$this->numPages} стр.";
+        return $base;
+    }
 }
 
 class shopProductWriter {
@@ -88,7 +95,9 @@ $product2 = new CDProduct("Пропавщий без вести",
     "Группа", "ДДТ",
     10.99, null, 60.33);
 
-print "Исполнитель: {$product2->getProducer()}\n";
+//print "Исполнитель: {$product2->getProducer()}\n";
+
+$writer->write( $product2 );
 
 ?>
 
